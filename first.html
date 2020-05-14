@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Day 3-4 first</title>
+    </head>
+    <body>
+        <p>Find the factorial of a number</p>
+        <input type="number" id = "ipt"/>
+        <button id = "btn" >click</button>
+        <p id = "demo"></p>
+        <script>
+           document.getElementById('btn').onclick = function() {
+               var x = document.getElementById('ipt').value;
+               document.getElementById('demo').innerHTML = fun(x);
+           }
+            fun = (a) => {
+                document.write(a);
+                if(a == 0)
+                {
+                    return 1;
+                }
+                else {
+                    return a * fun(a-1);
+                }
+            }
+           
+        </script>
+
+    </body>
+</html>
