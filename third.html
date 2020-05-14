@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>day 3 third</title>
+    </head>
+    <body>
+        <p>Find square and cube of a number</p>
+        <input type = "number" id = "ipt"/>
+        <button id = "btn">Square</button>
+        <button id = "btn2">Cube</button>
+        <p id = "demo"></p>
+        
+        <script>
+            document.getElementById('btn').onclick = function(){
+                var y = document.getElementById('ipt').value;
+                document.getElementById('demo').innerHTML = math.square(y);
+            }
+            document.getElementById('btn2').onclick = function(){
+                var y = document.getElementById('ipt').value;
+                document.getElementById('demo').innerHTML = math.cube(y);
+            }
+            class math{
+                static square(a)
+                {
+                    return a*a;
+                }
+                static cube(a)
+                {
+                    return a*a*a;
+                }
+            }
+
+        </script>
+    </body>
+</html>

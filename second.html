@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>day 3-4 second</title>
+    </head>
+    <body>
+        <p>Bank Details</p>
+        <p id= "demo"></p>
+        <script>
+            class Account
+            {
+                constructor(name, balance)
+                {
+                    this.name = name;
+                    this.balance = balance;
+                }
+                deposit(amt)
+                {
+                    this.balance += amt;
+                }
+                display()
+                {
+                    document.getElementById('demo').innerHTML = this.name + " " + this.balance;
+                }
+            }
+            raj = new Account("Raj", 1000);
+            nikhil = new Account("Nikhil", 2000);
+            nikhil.deposit(2000);
+            raj.deposit(10000);
+            raj.display();
+        </script>
+    </body>
+
+
+
+</html>
