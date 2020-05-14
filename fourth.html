@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>day 3 fourth</title>
+    </head>
+    <body>
+        <p id = "demo"></p>
+
+
+
+
+        <script>
+            class Account{
+                constructor(name, balance)
+                {
+                    this.name = name;
+                    this.balance = balance;
+                }
+                deposit(amt)
+                {
+                    this.balance += amt;
+                }
+            }
+            class currentAccount extends Account{
+                withdraw(amt)
+                {
+                    this.balance += amt;
+                }
+                show()
+                {
+                    document.getElementById('demo').innerHTML = this.name + " " + this.balance;
+                }
+
+            }
+            raj = new currentAccount("Raj",2000);
+            nikhil = new currentAccount("Nikhil", 3000);
+            raj.deposit(10000);
+            nikhil.deposit(20000);
+            raj.withdraw(2000);
+
+            raj.show();
+        </script>
+    </body>
+</html>
